@@ -1,5 +1,8 @@
+![Thomson Reuters Logo](http://cdn1.im.thomsonreuters.com/wp-content/themes/Im/images/tr-logo.png)
+
 # DataTables AngularJS Directive #
-## Author: David Owen (david.owen@thomsonreuters.com) ##
+**Author: David Owen (david.owen@thomsonreuters.com)**
+
 This project is built to host an Angular Directive that allows the usage of the DataTables.js open source control as an Angular Data Grid.
 
 The index page contains a single DataGrid directive. Data is populated by a faux service call that returns a static json file.
@@ -30,6 +33,12 @@ The directive allows the controller to pass an array of column objects into it t
  
 ### Server Side Sort Logic ###
 As mentioned above, the directive will pass the sorted column to the controller on header click (i.e. the native DataTables sort feature). The sample controller contains logic to build a query string parameter from the sort information to allow it to request a server side sort. This is required for supporting a server side paging solution. 
+
+## Acknowledgements ##
+Thanks to the [DataTables](http://datatables.net/ "DataTables") team. The DataTables library is a lightweight, feature rich grid solution with a great plugin community.
+
+Also, a special thanks to Adam Webber, who's initial work on an AngularJS DataTables [directive](https://groups.google.com/forum/#!topic/angular/vM2DEMK_NMA) helped demonstrate some of the core concepts of the interaction between a Directive and the DataTables API:  [http://jsfiddle.net/zdam/pb9ba/](http://jsfiddle.net/zdam/pb9ba/)
+
 
 
 ## Getting Started ##
