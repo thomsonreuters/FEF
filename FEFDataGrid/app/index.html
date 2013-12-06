@@ -1,0 +1,45 @@
+<!doctype html>
+<html ng-app="FEFDataGridModule">
+<head>
+    <meta charset="UTF-8">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>ThomsonReuters FEF DataTables AngularJS Directive</title>
+
+    <link type="text/css" rel="stylesheet" href="css/jquery.dataTables.css"/>
+</head>
+
+<body data-ng-controller="DataGridController">
+
+<div>
+
+        <!-- Data Grid -->
+        <table fef-data-grid
+               class="dataTable"
+               item-source="gridData"
+               column-definitions="columnDefinitions"
+               header-clicked="sortGrid(column)"
+               row-clicked="rowSelectHandler(rowParameter)"
+               is-row-editable="true"
+               >
+        </table>
+
+</div><!-- end of wrapper -->
+
+
+<script type="text/javascript" src="./lib/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="./lib/jquery.dataTables-1.9.4.min.js"></script>
+<script type="text/javascript" src="./lib/ColReorderWithResize.js"></script>
+
+<script type="text/javascript" src="./lib/angular/angular-1.2.0.js"></script>
+
+<!-- Controller -->
+<script type="text/javascript" src="./js/datagrid_ctlr.js"></script>
+
+<!-- Directive -->
+<script type="text/javascript" src="./js/fefdatagrid.js"></script>
+
+<!-- Application Module -->
+<script type="text/javascript" src="./js/app.js"></script>
+
+</body>
+</html>
