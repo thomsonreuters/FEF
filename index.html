@@ -5,12 +5,16 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>ThomsonReuters FEF DataTables AngularJS Directive</title>
 
-    <link type="text/css" rel="stylesheet" href="css/jquery.dataTables.css"/>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/jquery.dataTables.css"/>    
 </head>
 
 <body data-ng-controller="DataGridController">
 
-<div>
+<div class="container">
+
+  <p class="lead" style="margin-top:50px;">Welcome to the Front-End Framework DataTables AngularJS Directive</p>
+  <p style="margin-bottom:25px;">This is an Angular Directive that allows the usage of the DataTables.js open source control as an Angular Data Grid. View the Source Code on Github <a href="https://github.com/thomsonreuters/FEF/tree/master/FEFDataGrid">here</a>.</p>
 
         <!-- Data Grid -->
         <table fef-data-grid
