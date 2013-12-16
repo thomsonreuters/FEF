@@ -7,7 +7,7 @@
 
 This project is built to host an Angular Directive that allows the usage of the DataTables.js open source control as an Angular Data Grid.
 
-The index page contains a single DataGrid directive. Data is populated by a faux service call that returns a static json file.
+Notable Features include Simple Edit Features, Isolated Scope, Dynamic Column Generation from Service Data and Server Side Sort logic. See the Roadmap section below for details and for what's coming next.
 
 ## Notable Features ##
 
@@ -41,9 +41,30 @@ Thanks to the [DataTables](http://datatables.net/ "DataTables") team. The DataTa
 
 Also, a special thanks to Adam Webber, who's initial work on an AngularJS DataTables [directive](https://groups.google.com/forum/#!topic/angular/vM2DEMK_NMA) helped demonstrate some of the core concepts of the interaction between a Directive and the DataTables API:  [http://jsfiddle.net/zdam/pb9ba/](http://jsfiddle.net/zdam/pb9ba/)
 
+## How to Use the FEFDataGrid Directive ##
+1. Ensure all necessary files are available in your project (AngularJS, JQuery & DataTables Libraries and the FEFDataGrid.js directive file).
+
+2. Add a controller that populates a property for the data (ex: gridData) and a property for the column definitions (ex: column Definitions).
+
+Example:
+
+	function DataGridController($scope, $http, $log) {
+		$scope.gridData = [];
+		$scope.columnDefinitions = [];		
+	}
 
 
-## Getting Started ##
+3. Add a reference to the directive to your page and map the item-source attribute to the data property in your controller and the column-definitions attribute to the column property in the controller. Note: ensure you populate the column property in your controller before the data property as changes to the data property trigger the rendering logic.
+
+Example: 
+
+    <table fef-data-grid
+           class="dataTable"
+           item-source="gridData"
+           column-definitions="columnDefinitions">
+    </table> 
+
+## Getting Started With The Sample ##
 
 **1. Install NodeJS**
 
