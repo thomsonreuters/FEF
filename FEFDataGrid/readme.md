@@ -93,9 +93,9 @@ Run the following command to verify the correct usage of lower case and perform 
 	grunt 
 
 ## Unit Testing ##
-To run the unit tests, run the following command from the .\scripts directory:
+To run the unit tests, run the following command from the repository root:
 
-	test.sh
+	grunt test
 
 ## Known Issues ##
 1. Selecting a 2nd row for editing will occasionally skip the logic to restore the currently edited row to read only.
