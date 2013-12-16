@@ -14,11 +14,45 @@
 <div class="container">
 
   <p class="lead" style="margin-top:50px;">Welcome to the Front-End Framework DataTables AngularJS Directive</p>
-  <p style="margin-bottom:25px;">This is an Angular Directive that allows the usage of the DataTables.js open source control as an Angular Data Grid. View the Source Code on Github <a href="https://github.com/thomsonreuters/FEF/tree/master/FEFDataGrid">here</a>.</p>
+  <p style="margin-bottom:25px;">This is an Angular Directive that allows the usage of the DataTables.js open source control as an Angular Data Grid. View the Source Code, Documentation, Known Issues & Roadmap on Github <a href="https://github.com/thomsonreuters/FEF/tree/master/FEFDataGrid">here</a>.</p>
+
+  <p style="font-size:14pt;">Notable Features</p>
+
+  <p style="font-size:12pt;">Simple Edit Features</p>  
+The is-row-editable setting allows the directive to enable edit mode on a clicked row. When this feature is enabled, the contents of the target row is replaced by a series of input tags. Leaving the row commits the changes to the UI and the underlying data context.
+A more robust and dynamic editing template is in the works.
+
+<p/>
+<p style="font-size:12pt;">Isolated Scope</p>
+Using an Isolated Scope in the directive encapsulates the directive logic and only allows it access to the controller properties and methods mapped in the HTML declaration. It also allows multiple instances to be used on the same page.
+The current version supports the following Controller member mappings:
+<ul>
+  <li>itemSource (required) - Indicates the property on the controller to be used to populate the DataTable with data. The directive will apply a watch on this property during initialization and will watch for changes.</li>
+
+  <li>columnDefinitions (required) - Indicates the property on the controller to be used to set column data on the table. Note that the directive does contain logic to extract this information from table header elements, but this functionality is not yet functional. Once this logic is enabled, this property becomes optional.</li>
+
+  <li>rowClicked (optional) - Indicates the method on the controller to pass the clicked row object to.</li>
+
+  <li>rowDblclicked (optional)- Indicates the method on the controller to pass the double-clicked row object to.</li>
+
+  <li>headerClicked (optional) - Indicates the method on the controller to pass the clicked header object to. This feature allows the controller to intercept sort events for the purpose of including them in it's service calls.</li>
+</ul>
+
+<p/>
+<p style="font-size:12pt;">Dynamic Column Generation</p>
+
+The directive allows the controller to pass an array of column objects into it to allow for dynamic headers, visibility settings, etc. This example includes the column data in the service call to simulate a server-side driven table layout.
+
+<p/>
+<p style="font-size:12pt;">Server Side Sort Logic</p>
+As mentioned above, the directive will pass the sorted column to the controller on header click (i.e. the native DataTables sort feature). The sample controller contains logic to build a query string parameter from the sort information to allow it to request a server side sort. This is required for supporting a server side paging solution.
+
+
 
         <!-- Data Grid -->
         <table fef-data-grid
                class="dataTable"
+               style="margin-top:25px;"
                item-source="gridData"
                column-definitions="columnDefinitions"
                header-clicked="sortGrid(column)"
