@@ -79,6 +79,13 @@ module.exports = function(grunt) {
      all : {
         src: ["app/js/**"]
      }
+    },
+
+    karma: {
+        unit: {
+            configFile: './config/karma.conf.js',
+            autoWatch: true
+        }
     }
 
 
@@ -93,4 +100,8 @@ module.exports = function(grunt) {
     grunt.registerTask('server', [
             'connect:frontend:keepalive'
         ]);
+
+    grunt.registerTask('test', [
+        'karma:unit'
+    ]);
 };

@@ -1,21 +1,20 @@
-basePath = '../';
+// Karma configuration
+module.exports = function(config) {
+    config.set({
 
-files = [
-  JASMINE,
-  JASMINE_ADAPTER,
-    'app/lib/angular/angular-1.2.0.js',
-    'test/lib/angular/angular-mocks-1.2.0.js',
-    'app/js/fefdatagrid.js',
-    'app/js/datagrid_ctlr.js',
-    'app/js/app.js',
-    'test/unit/**/*.js'
-];
+        basePath: '../',
 
-autoWatch = true;
+        frameworks: ['jasmine'],
 
-browsers = ['Chrome'];
+        files: [
+            'app/lib/angular/angular-1.2.0.js',
+            'test/lib/angular/angular-mocks-1.2.0.js',
+            'app/js/fefdatagrid.js',
+            'app/js/datagrid_ctlr.js',
+            'app/js/app.js',
+            'test/unit/**/*.js'
+        ],
 
-junitReporter = {
-  outputFile: 'test_out/unit.xml',
-  suite: 'unit'
+        browsers: ['Chrome']
+    });
 };
