@@ -82,7 +82,8 @@ To run the unit tests, run the following command from the .\scripts directory:
 3. Native sorting causes targeting issues with the row click event and is therefore disabled during edit mode. 
 
 ## Road Map ##
-The following features are either in progress or identified for the next development cycle.
+The following features are either in progress or identified for the next development cycle:
+
 1. Cell Types: The ability to display images and hyperlinks.
 2. Client/Server Side Pagination: wiring a series of paging controls to the directive and executing serer side pagination calls via the controller.
 3. Multi-select: via row checkbox selection. 
