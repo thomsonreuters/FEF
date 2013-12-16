@@ -3,6 +3,8 @@
 # DataTables AngularJS Directive #
 **Author: David Owen (david.owen@thomsonreuters.com)**
 
+**Project Demo: http://thomsonreuters.github.io/FEF/**
+
 This project is built to host an Angular Directive that allows the usage of the DataTables.js open source control as an Angular Data Grid.
 
 The index page contains a single DataGrid directive. Data is populated by a faux service call that returns a static json file.
