@@ -48,7 +48,7 @@ Also, a special thanks to Adam Webber, who's initial work on an AngularJS DataTa
 
 Example:
 
-	function DataGridController($scope, $http, $log) {
+	function DataGridController($scope) {
 		$scope.gridData = [];
 		$scope.columnDefinitions = [];		
 	}
