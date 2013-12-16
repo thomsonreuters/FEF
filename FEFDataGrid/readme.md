@@ -76,6 +76,19 @@ To run the unit tests, run the following command from the .\scripts directory:
 
 	test.sh
 
+## Known Issues ##
+1. Selecting a 2nd row for editing will occasionally skip the logic to restore the currently edited row to read only.
+2. Switching to Edit Mode does not apply a width style to the dynamically generated input controls. Therefore, the grid will scroll horizontally when in edit mode.
+3. Native sorting causes targeting issues with the row click event and is therefore disabled during edit mode. 
+
+## Road Map ##
+The following features are either in progress or identified for the next development cycle.
+1. Cell Types: The ability to display images and hyperlinks.
+2. Client/Server Side Pagination: wiring a series of paging controls to the directive and executing serer side pagination calls via the controller.
+3. Multi-select: via row checkbox selection. 
+4. Right-click Context Menu 
+5. Performance Enhancements via visualization plugin. 
+6. Enhanced edit features 
 
 # Project File Structure #
 
