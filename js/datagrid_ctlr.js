@@ -22,7 +22,7 @@ function DataGridController($scope, $http, $log) {
     /**** Scope Methods ***/
     $scope.refreshDataGrid = function(pageNumber, sortField, sortAscending)
     {
-        var dataURL = "../../data/datacollection.json";
+        var dataURL = "./data/datacollection.json";
 
         var sortFilter = '';
 
