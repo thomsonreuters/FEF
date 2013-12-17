@@ -7,7 +7,14 @@
 
 This project is built to host an Angular Directive that allows the usage of the DataTables.js open source control as an Angular Data Grid.
 
-Notable Features include Simple Edit Features, Isolated Scope, Dynamic Column Generation from Service Data and Server Side Sort logic. See the Roadmap section below for details and for what's coming next.
+Notable Features include: 
+
+- Simple Edit Features
+- Isolated Scope
+- Dynamic Column Generation from Service Data
+- Server Side Sort logic. 
+
+See the Roadmap section below for details and for what's coming next.
 
 ## Notable Features ##
 
