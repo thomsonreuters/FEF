@@ -12,7 +12,7 @@ Notable Features include:
 - Simple Edit Features
 - Isolated Scope
 - Dynamic Column Generation from Service Data
-- Server Side Sort logic. 
+- Server Side Sort logic
 
 See the Roadmap section below for details and for what's coming next.
 
