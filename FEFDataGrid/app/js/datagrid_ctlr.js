@@ -56,9 +56,25 @@ function DataGridController($scope, $http, $log) {
                     column.sWidth = value.width;
                     column.field = value.id;
 
+                    // In this example, I only want to display the 2nd column as a hyperlink.
+                    if( key === 1)
+                    {
+                        // Add the fnRender method to the column property
+                        column.fnRender = function (oObj) {
+
+                            // The function returns the html of the element we want to display in the cell.
+                            // This example would send the user to the User/Edit/UserID route.
+                            return '<a href="#!/user/edit/' + oObj.aData[0] + '">' + oObj.aData[1] + '</a>';
+
+                            // Alternate method using named properties. Note that in order to use property names, the DataTables 'mData' column field specifier must be used to bind the column.
+                            // return '<a href="#!/user/edit/' + oObj.aData.userID + '">' + oObj.aData.userName + '</a>';
+                        };
+                    }
+                }
+
                     // Store the object in the columns collection.
                     columns.push(column);
-                }
+
             });
 
             // Store the columns collection in the public property.
