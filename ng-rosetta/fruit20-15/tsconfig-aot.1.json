@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "outDir": "aot/discard_js"
+  },
+  "files": [
+    "src/polyfills.ts",
+    "src/vendor.ts",
+    "src/main.ts",
+    "src/js/components/app.ts",
+    "typings/index.d.ts"
+  ],
+  "angularCompilerOptions": {
+    "genDir": "aot/discard_ts",
+    "skipMetadataEmit": true
+  }
+}

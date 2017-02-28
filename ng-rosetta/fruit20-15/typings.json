@@ -1,0 +1,11 @@
+{
+  "globalDependencies": {
+    "angular": "registry:dt/angular#1.5.0+20160517064839",
+    "angular-ui-router": "github:DefinitelyTyped/DefinitelyTyped/angular-ui-router/angular-ui-router.d.ts#ba257a9b91bc0de1bdd9091b6723194c905a902a",
+    "ui-grid": "registry:dt/ui-grid#0.0.0+20160816133502",
+    "core-js": "registry:dt/core-js#0.0.0+20160602141332",
+    "jasmine": "registry:dt/jasmine#2.2.0+20160621224255",
+    "jquery": "registry:dt/jquery#1.10.0+20160417213236",
+    "node": "registry:dt/node#6.0.0+20160807145350"
+  }
+}

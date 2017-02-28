@@ -1,0 +1,17 @@
+# frontend/build generated directories
+
+aot/
+
+node_modules/
+
+typings/
+
+app/bower_components/
+src/lib/
+webapp/
+.tmp/
+cmdb/
+generated/
+archive/
+
+.git/

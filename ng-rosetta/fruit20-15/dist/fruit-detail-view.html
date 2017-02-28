@@ -1,0 +1,51 @@
+<!-- This source code is provided under the BSD license and is provided AS IS with no warranty or guarantee of fit for purpose.  See the project's LICENSE.MD for details.
+Copyright Thomson Reuters 2017. All rights reserved. -->
+
+<h1>Fruit Detail View</h1>
+
+<div class="form-horizontal">
+
+	<div class="form-group">
+		<div class="col-sm-5">
+			<!-- Using the custom fruitimagecomponent Component, render the Fruit Image into an anchor that targets the detail page 
+            by passing the appropriate model properties into the directive's required bindings. -->
+			<fruitimagecomponent url='ctlr.currentfruititem.URL' imageurl='ctlr.currentfruititem.ImageURL'></fruitimagecomponent>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-5">
+			<label class="control-label">ID</label>
+			<input required type="text" class="form-control" ng-model="ctlr.currentfruititem.id" readonly>
+		</div>
+
+		<div class="col-sm-5">
+			<span>
+				<!-- Downgraded Angular Component -->
+				<samplecomponent></samplecomponent>
+			</span>
+		</div>		
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-5">
+			<label class="control-label">Name</label>
+			<input required type="text" class="form-control" ng-model="ctlr.currentfruititem.common_name">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-5">
+			<label class="control-label">Species</label>
+			<input required type="text" class="form-control" ng-model="ctlr.currentfruititem.species">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<div class="col-sm-5">
+			<label class="control-label">Region</label>
+			<input required type="text" class="form-control" ng-model="ctlr.currentfruititem.region">
+		</div>
+	</div>
+
+</div>

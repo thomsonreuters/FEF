@@ -1,0 +1,44 @@
+<!-- This source code is provided under the BSD license and is provided AS IS with no warranty or guarantee of fit for purpose.  See the project's LICENSE.MD for details.
+Copyright Thomson Reuters 2017. All rights reserved. -->
+
+<h1>Fruit Item Detail View</h1>
+
+<div class="form-horizontal">
+
+    <div class="form-group">
+        <div class="col-sm-5">
+            <!-- Using the custom fruitImage directive, render the fruit Image into an anchor that targets the detail page 
+            by passing the appropriate model properties into the directive's required bindings. -->
+            <fruit-image url='vm.currentFruitItem.URL' imageurl='vm.currentFruitItem.ImageURL'></fruit-image>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-5">
+            <label class="control-label">ID</label>
+            <input required type="text" class="form-control" ng-model="vm.currentFruitItem.id" readonly>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <div class="col-sm-5">
+            <label class="control-label">Name</label>
+            <input required type="text"  class="form-control" ng-model="vm.currentFruitItem.common_name">
+        </div>
+    </div>    
+    
+    <div class="form-group">
+        <div class="col-sm-5">
+            <label class="control-label">Species</label>
+            <input required type="text" class="form-control" ng-model="vm.currentFruitItem.species">
+        </div>
+    </div>    
+
+    <div class="form-group">
+        <div class="col-sm-5">
+            <label class="control-label">Region</label>
+            <input required type="text" class="form-control" ng-model="vm.currentFruitItem.region">
+        </div>
+    </div>
+
+</div>

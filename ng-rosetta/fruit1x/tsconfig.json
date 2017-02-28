@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {        
+        "outFile": "app/js/generated/fruitapp.js",
+        "module": "system",
+        "target": "es5",
+        "noImplicitAny": false,
+        "sourceMap": true
+    },    
+    "exclude": [
+        "node_modules"
+    ],
+    "files": [        
+        "app/js/app.ts"                    
+    ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "fruit1x",
+  "dependencies": {},
+  "globalDependencies": {
+    "angular": "registry:dt/angular#1.5.0+20160725073351",
+    "angular-translate": "registry:dt/angular-translate#2.4.0+20160729132354",
+    "angular-ui-router": "registry:dt/angular-ui-router#1.1.5+20160810191828",
+    "jquery": "registry:dt/jquery#1.10.0+20160929162922",
+    "ui-grid": "registry:dt/ui-grid#0.0.0+20160816133502"
+  }
+}

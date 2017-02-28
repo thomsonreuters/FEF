@@ -1,0 +1,9 @@
+diff a/fruit20/src/data/in-memory-data.service.ts b/fruit20/src/data/in-memory-data.service.ts	(rejected hunks)
+@@ -0,6 +0,7 @@
+                 ImageURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Psidium_cattleianum_fruit.jpg/220px-Psidium_cattleianum_fruit.jpg"
+             },
+             {
++                id: 9,
+                 common_name: "Sugar Plum",
+                 species: "Borassus flabellifer",
+                 region: "India",

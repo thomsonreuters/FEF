@@ -1,0 +1,33 @@
+<!-- This source code is provided under the BSD license and is provided AS IS with no warranty or guarantee of fit for purpose.  See the project's LICENSE.MD for details.
+Copyright Thomson Reuters 2017. All rights reserved. -->
+
+<div>
+
+    <h2>List View</h2>
+
+    <!-- Display a loading indicator during startup. The loading property is enabled/disabled by the component class. -->
+    <div *ngIf="loading">loading...</div>
+    
+    <button (click)="loadVendor()" class="btn btn-circ btn-primary">Lazy Load Vendor Module</button>
+
+    <!-- Using a simple Table model to illustrate functionality and accomodate NG2 AOT -->
+    <table *ngIf="!loading" class="table table-condensed table-hover">
+        <thead>
+            <tr>
+                <th style="width: 200px;">Name</th>
+                <th style="width: 200px;">Species</th>
+                <th style="width: 200px;">Region</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!--Loop through each fruit item in the rowData collection and render a row in the navigation grid.-->
+            <tr *ngFor="let fruitItem of rowData" (click)="loadDetail(fruitItem)">
+                <td><a href="{{fruitItem.url}}" target="new">{{fruitItem.common_name}}</a></td>
+                <td>{{fruitItem.species}}</td>
+                <td>{{fruitItem.region}}</td>
+                <td><img src="{{fruitItem.image_url}}" style="height: 75px; width: 75px;"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

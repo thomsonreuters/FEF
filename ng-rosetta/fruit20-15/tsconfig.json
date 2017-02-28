@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "outDir": "src/js/generated",
+    "rootDir": ".",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "removeComments": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "noImplicitAny": false
+  },
+  "files": [
+    "src/polyfills.ts",
+    "src/vendor.ts",
+    "src/main.ts",
+    "src/legacy.ts",
+    "typings/index.d.ts"
+  ],
+  "awesomeTypescriptLoaderOptions": {
+    "useWebpackText": true
+  },
+  "atom": { "rewriteTsconfig": false }
+}

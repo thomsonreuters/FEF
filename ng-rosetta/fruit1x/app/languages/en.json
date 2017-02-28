@@ -1,0 +1,11 @@
+// This source code is provided under the BSD license and is provided AS IS with no warranty or guarantee of fit for purpose.  See the project's LICENSE.MD for details.
+// Copyright Thomson Reuters 2017. All rights reserved.
+
+{
+    "FRUIT-1.X": {
+        "HOME": "Home View",
+        "TITLE": "Hello",
+        "FOO": "This is a paragraph"
+    }
+}
+

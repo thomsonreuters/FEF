@@ -1,0 +1,49 @@
+<!-- This source code is provided under the BSD license and is provided AS IS with no warranty or guarantee of fit for purpose.  See the project's LICENSE.MD for details.
+Copyright Thomson Reuters 2017. All rights reserved. -->
+
+<!doctype html>
+<!-- Declare that this page is an AngularJS application and bind the page to the fruit1x module, defined in the app.js file -->
+<html lang="en" ng-app="fruitApp15">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Fruit-1.5</title>
+
+    <!-- build:css styles/vendor.css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="bower_components/angular-ui-grid/ui-grid.min.css">
+    <!-- endbuild -->
+    <!-- build:css styles/fruit15.css -->
+    <link rel="stylesheet" href="/styles/home.css">
+    <!-- endbuild -->
+</head>
+
+<body>
+
+    <!-- Declare the Angular viewport. This is where the selected route is displayed. -->
+    <div class="view-animate-container">
+        <div id="fruit15" ui-view="" class="view-animate"></div>
+    </div>
+
+    <!-- Base JavaScript dependencies -->
+    <!-- build:js js/vendor.js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-ui-grid/ui-grid.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js js/scripts.js -->
+    <script src="js/generated/fruitapp.js"></script>
+    <!-- endbuild -->
+
+</body>
+
+</html>

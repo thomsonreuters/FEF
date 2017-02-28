@@ -1,0 +1,87 @@
+{
+    "rules": {
+        "class-name": true,
+        "curly": true,
+        "eofline": true,
+        "forin": true,
+        "indent": [
+            true,
+            4
+        ],
+        "interface-name": true,
+        "jsdoc-format": true,
+        "label-position": true,
+        "label-undefined": true,
+        "max-line-length": [
+            true,
+            200
+        ],
+        "no-any": false,
+        "no-arg": true,
+        "no-bitwise": true,
+        "no-console": [
+            true,
+            "debug",
+            "info",
+            "time",
+            "timeEnd",
+            "trace"
+        ],
+        "no-consecutive-blank-lines": true,
+        "no-construct": true,
+        "no-constructor-vars": false,
+        "no-debugger": true,
+        "no-duplicate-key": true,
+        "no-duplicate-variable": true,
+        "no-empty": true,
+        "no-eval": true,
+        "no-string-literal": false,
+        "no-switch-case-fall-through": false,
+        "no-trailing-comma": true,
+        "no-trailing-whitespace": true,
+        "no-unreachable": true,
+        "no-unused-expression": false,
+        "no-unused-variable": true,
+        "no-use-before-declare": true,
+        "no-var-requires": true,
+        "one-line": [
+            true,
+            "check-open-brace",
+            "check-catch",
+            "check-else",
+            "check-whitespace"
+        ],
+        "quotemark": [
+            true,
+            "single"
+        ],
+        "radix": true,
+        "semicolon": true,
+        "triple-equals": [
+            true,
+            "allow-null-check"
+        ],
+        "typedef": false,
+        "typedef-whitespace": [
+            true,
+            [
+                "call-signature",
+                "noSpace"
+            ]
+        ],
+        "use-strict": [
+            true,
+            "check-function",
+            "check-module"
+        ],
+        "variable-name": false,
+        "whitespace": [
+            false,
+            "check-branch",
+            "check-decl",
+            "check-operator",
+            "check-separator",
+            "check-type"
+        ]
+    }
+}
