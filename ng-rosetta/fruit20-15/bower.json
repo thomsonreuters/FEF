@@ -2,6 +2,7 @@
   "name": "fruit15",
   "version": "1.5.0",
   "dependencies": {
+    "angular": "1.5.7",
     "angular-translate": "~2.2.0",
     "angular-translate-loader-static-files": "~2.2.0",
     "angular-dynamic-locale": "~0.1.17",
