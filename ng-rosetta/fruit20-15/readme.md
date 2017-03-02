@@ -82,7 +82,6 @@ All of the above AOT tasks have been concatenated into a single build task.
 Execute: `npm run build:aot`
 
 ## TODOS
-* Expand copyresources task to include bower_components folder.
 * Create an Html Template build task for AOT.
 * Migrate build system to WebPack 2
 * Create a unit test for fruit-list component to handle the http call.

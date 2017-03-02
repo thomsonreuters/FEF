@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --inline --progress --display-error-details --port 9215",
     "test": "karma start config/karma.conf.js",
-    "copyresources": "cpx src/bower_components/** dist/assets/bower_components && cpx node_modules/core-js/client/shim.min.js dist/assets && cpx node_modules/zone.js/dist/zone.min.js dist/assets",
+    "copyresources": "cpx \"src/bower_components/**\" dist/assets/bower_components && cpx \"node_modules/core-js/client/shim.min.js\" dist/assets && cpx \"node_modules/zone.js/dist/zone.min.js\" dist/assets",
     "postinstall": "bower install && typings install && npm run copyresources",
     "clean:aot": "rimraf aot",
     "build:aot1": "ngc -p tsconfig-aot.1.json",
@@ -57,6 +57,7 @@
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.7.0",
+    "lite-server": "^2.2.2",
     "ngtemplate-loader": "^1.3.1",
     "null-loader": "^0.1.1",
     "phantomjs-prebuilt": "^2.1.7",
