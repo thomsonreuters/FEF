@@ -15,3 +15,5 @@ generated/
 archive/
 
 .git/
+
+yarn*.*
