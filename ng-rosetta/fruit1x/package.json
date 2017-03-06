@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "author": "David Owen",
   "description": "Angular1.X Reference Application (ng-rosetta series)",
+  "license": "BSD3",
   "scripts": {
     "postinstall": "bower install && typings install"
   },

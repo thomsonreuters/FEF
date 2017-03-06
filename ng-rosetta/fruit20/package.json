@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "author": "David Owen",
   "description": "Angular2 Reference Application (ng-rosetta series)",
+  "license": "BSD3",
   "scripts": {
     "start": "webpack-dev-server --inline --progress --port 8080",
     "test": "karma start config/karma.conf.js",

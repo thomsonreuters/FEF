@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "author": "David Owen",
   "description": "Angular 2.0/1.5 Hybrid Reference App (ng-rosetta series)",
+  "license": "BSD3",
   "scripts": {
     "start": "webpack-dev-server --inline --progress --display-error-details --port 9215",
     "test": "karma start config/karma.conf.js",
@@ -16,7 +17,6 @@
     "serve:aot": "lite-server -c config/lite-server-config.json",
     "build:aot": "echo \"Clean the AOT directory.\" && npm run clean:aot && echo \"Run the AOT 1st pass.\" && npm run build:aot1 && echo \"Run the AOT 2nd pass.\" && npm run build:aot2 && echo \"Run the RollupJS task.\" && npm run build:aot3 && echo \"Run the ES5 Transpiler Task.\" && npm run build:aot4 && echo \"Launch the server.\" && npm run serve:aot"
   },
-  "license": "MIT",
   "dependencies": {
     "@angular/common": "2.2.4",
     "@angular/compiler": "2.2.4",
