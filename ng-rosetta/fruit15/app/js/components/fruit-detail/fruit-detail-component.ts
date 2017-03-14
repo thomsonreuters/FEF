@@ -5,16 +5,18 @@
 
 module fruit15.fruitItemDetail {
 
-    export class FruitItemDetailComponent implements angular.IComponentOptions {
+    export class FruitItemDetailComponent implements angular.IComponentOptions {        
         public templateUrl: string;
         public template: string;
         public controller: any;
         public controllerAs: string;
         public bindings: any;
 
-        constructor() {  this.templateUrl = 'js/components/fruit-detail/fruit-detail-view.html';
+        constructor() {  
+            this.templateUrl = 'js/components/fruit-detail/fruit-detail-view.html';
             this.controller = FruitItemDetailController;
             this.controllerAs = 'ctlr';
+
             // The bindings property is used to recieve the list resolved in the route's state. 
             // Note that the bindings properties are appended to the component's controller. Therefore, this.bindings = { fruitlist: 'value' },
             // becomes this.controller.fruitlist with the appropriate value mapped. Which means it can be bound to on the view like this: {{ctlr.fruitlist}}
@@ -28,7 +30,7 @@ module fruit15.fruitItemDetail {
     }
 
     export class FruitItemDetailController {
-        private testableProperty: string = 'Test property';
+        public testableProperty: string = 'Test property';
 
         constructor() {}            
     }

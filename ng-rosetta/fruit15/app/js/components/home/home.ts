@@ -20,6 +20,7 @@ module fruit15.home {
     }
 
     class HomeController {
+        public testableProperty: string = 'Test property';
         private userName: string;
         private password: string;
 

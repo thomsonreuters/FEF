@@ -26,6 +26,7 @@ module fruit15.fruitList {
     }
 
     export class FruitListController {
+        public testableProperty: string = 'Test property';
         private gridModel: uiGrid.IGridOptions = {};
         private isLoaderBusy: boolean = true;
 
