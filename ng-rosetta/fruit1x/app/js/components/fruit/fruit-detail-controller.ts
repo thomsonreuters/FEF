@@ -7,6 +7,7 @@ module fruit1x {
     'use strict'
 
     export class FruitDetailController {
+        public testableProperty:string = 'Hello World!';
         private currentFruitItem: FruitItem;
 
         // The incoming parameter will be passed in via the Router.

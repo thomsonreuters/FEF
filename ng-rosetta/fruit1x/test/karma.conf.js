@@ -38,6 +38,7 @@ module.exports = function(config) {
 	  'app/bower_components/angular-dynamic-locale/src/tmhDynamicLocale.js',
 	  'app/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
 	  'app/bower_components/angular-ui-router/release/angular-ui-router.js',
+		'app/bower_components/angular-ui-grid/ui-grid.js',
 	  'app/js/generated/*.js',
 	  'test/spec/**/*.js',
 	  'test/spec/*.js',

@@ -11,11 +11,11 @@ module fruit1x {
         loadDetail: Function;
     }
     
-    export class FruitController {
-        private testableProperty: string = 'Binding Works';
+    export class FruitListController {
+        public testableProperty: string = 'Hello World!';        
         private isLoaderBusy: boolean = true;
         private fruitList: any[];
-        private gridModel: uiGrid.IGridOptions = {};
+        public gridModel: uiGrid.IGridOptions = {};
 
         // These items need to be manually injected, otherwise dependency injection fails.
         // Note that the second parameter is the name of the state resolve parameter being passed in.

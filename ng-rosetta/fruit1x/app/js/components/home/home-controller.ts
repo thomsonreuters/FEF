@@ -8,7 +8,7 @@ module fruit1x {
 
 
     export class HomeController {
-        testableProperty:string = 'Hello World!';
+        public testableProperty:string = 'Hello World!';
         
         constructor(private $log: ng.ILogService,  private $state: angular.ui.IStateService) {
             $log.info('Home Controller Loaded.');

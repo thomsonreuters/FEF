@@ -41,7 +41,7 @@ module fruit1x {
                 .state('fruit-list', {
                     url: '/fruit-list',
                     templateUrl: 'js/components/fruit/fruit-list-view.html',                  
-                    controller: FruitController,
+                    controller: FruitListController,
                     controllerAs: 'vm'
                 })
 
@@ -101,7 +101,7 @@ module fruit1x {
         .factory('fruitFactory', ($http: ng.IHttpService) => new fruit1x.FruitFactory($http))        
         .service('fruitUtils', fruit1x.FruitUtils)
         .controller('homeController', fruit1x.HomeController)
-        .controller('fruitController', fruit1x.FruitImageDirective)    
+        .controller('fruitListController', fruit1x.FruitListController)    
         .controller('fruitDetailController', fruit1x.FruitDetailController)
         .directive('fruitImage', fruit1x.FruitImageDirective);
     })();
