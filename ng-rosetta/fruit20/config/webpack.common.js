@@ -9,15 +9,15 @@ module.exports = {
   // Each reference represents the head of a different dependency chain (main.ts is the custom application entry point).
   // Blocks are given priority below so that references are not duplicated.
   // Each block is output as a seperate js file and inserted into the DOM as a <script> tag. 
-  entry: {    
+  entry: {
     'polyfills': './src/polyfills.ts',
-    'vendor': ['./src/vendor.ts'],    
+    'vendor': ['./src/vendor.ts'],
     'app': './src/main.ts'
   },
 
   // Specifies which file types to analyze, in order of process (right to left).
   resolve: {
-    extensions: ['', '.ts', '.min.js', '.js']
+    extensions: ['.ts', '.min.js', '.js']
   },
 
   module: {
@@ -25,22 +25,47 @@ module.exports = {
     // Example, *.ts files are processed with both the ts-loader and angular2-template-loader (all downloaded via the npm manifest: package.json)
     // Note that the ts-loader will feed all discovered TypeScript files into the TypeScript compiler.
     // The TypeScript compiler options are still configured via ./tsconfig.json.
-    loaders: [
+    rules: [
       {
         test: /\.ts$/,
-        loaders: ['ts', 'angular2-template-loader', 'angular2-router-loader'] //The router loader is used to support lazy loading of the fruit-vendor module.
+        use: [
+          {
+            loader: 'ts-loader'
+          },
+          {
+            loader: 'angular2-template-loader'
+          },
+          {
+            loader: 'angular2-router-loader'
+          }
+        ]
       },
       {
         test: /\.html$/,
-        loader: 'html'
+        use: [
+          {
+            loader: 'html-loader'
+          }
+        ]
       },
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-        loader: 'file?name=assets/[name].[hash].[ext]'
+        use: [
+          {
+            loader: 'file-loader'
+          }
+        ]
       },
       {
         test: /\.css$/,
-        loaders: ['style', 'css']
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          }
+        ]
       }
     ]
   },
