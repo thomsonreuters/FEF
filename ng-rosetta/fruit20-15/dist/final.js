@@ -12196,7 +12196,8 @@
         'pascalprecht.translate',
         'tmh.dynamicLocale',
         'ui.grid',
-        'ui.grid.selection'])
+        'ui.grid.selection'
+    ])
         .config(['$stateProvider', '$urlRouterProvider',
         function ($stateProvider, $urlRouterProvider) {
             return new AppConfig($stateProvider, $urlRouterProvider);

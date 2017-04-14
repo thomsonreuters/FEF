@@ -1,3 +1,4 @@
+// All base configuration items. This file is combined with the appropriate target build config file (dev, prod, etc.)
 var webpack = require('webpack');
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -5,6 +6,11 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./helpers');
 
 module.exports = {
+
+  // Each entry point described below represents a block of references.
+  // Each reference represents the head of a different dependency chain (main.ts is the custom application entry point).
+  // Blocks are given priority below so that references are not duplicated.
+  // Each block is output as a seperate js file and inserted into the DOM as a <script> tag. 
   entry: {
     'polyfills': './src/polyfills.ts',
     'vendor': './src/vendor.ts',
@@ -13,7 +19,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js', '.ts'],
+    extensions: ['.js', '.ts'],
     alias: {
       "@angular/upgrade/static": "@angular/upgrade/bundles/upgrade-static.umd.js"
     }
@@ -21,48 +27,42 @@ module.exports = {
 
   module: {
 
-    preLoaders: [
-      {
-        test: /\.js$/,
-        loader: 'source-map-loader',
-        exclude: [
-          // these packages have problems with their sourcemaps
-          path.join(__dirname, 'node_modules', 'rxjs'),
-          path.join(__dirname, 'node_modules', '@angular2-material'),
-          path.join(__dirname, 'node_modules', '@angular'),
-          path.join(__dirname, 'node_modules', 'angular'),
-        ]
-      }
-    ],
-
     noParse: [
       path.join(__dirname, 'node_modules', 'zone.js', 'dist'),
       path.join(__dirname, 'node_modules', 'angular2', 'bundles')
     ],
 
-    loaders: [
+    rules: [
       {
         test: /\.ts$/,
-        exclude: [
-          './src/js'
-        ],    
-        loaders: ['ts', 'angular2-template-loader']
+        exclude: ['./src/js'],    
+        use: [
+          { loader: 'ts-loader' }, 
+          { loader: 'angular2-template-loader' }
+        ]
       },
       {
         test: /\.html$/,
-        loader: 'html'
+        use: [{ loader: 'html-loader' }]
       },
       {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-        loader: 'file?name=assets/[name].[hash].[ext]'
+        use: [{ loader: 'file-loader '}] 
       },
       {
         test: /\.css$/,
-        loader: 'raw'
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          }
+        ]
       }
     ]
   },
-
+  
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
       name: ['main', 'legacy', 'vendor', 'polyfills']
