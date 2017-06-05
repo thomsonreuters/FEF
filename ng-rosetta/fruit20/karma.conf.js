@@ -1,8 +1,7 @@
-var webpackConfig = require('./webpack.config.js');
-webpackConfig.entry = {};
+var path = require('path');
 
 // Karma configuration
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
     basePath: '',
 
@@ -15,24 +14,44 @@ module.exports = function(config) {
       require('karma-webpack')
     ],
 
+    client:{
+      clearContext: false // leave Jasmine Spec Runner output visible in browser
+    },
+
 
     files: [
       // each file acts as entry point for the webpack configuration
-      {pattern: 'src/main.spec.ts', watched: true}
+      { pattern: './src/main.spec.ts', watched: true }
     ],
 
     preprocessors: {
       // add webpack as preprocessor
-      'src/main.spec.ts': ['webpack'],
+      './src/main.spec.ts': ['webpack'],
     },
 
     mime: {
-      'text/x-typescript': ['ts','tsx']
+      'text/x-typescript': ['ts', 'tsx']
     },
 
     webpack: {
-      module: webpackConfig.module,
-      resolve: webpackConfig.resolve
+      module: {
+        rules: [
+          {
+            test: /\.ts$/,
+            exclude: [path.resolve(__dirname, './src/main.aot.ts')],
+            use: [
+              { loader: 'ts-loader' },
+              { loader: 'angular2-template-loader' },
+              { loader: 'angular2-router-loader' }
+            ]
+          },
+          {
+            test: /\.html$/,
+            use: [{ loader: 'html-loader' }]
+          }
+        ]
+      },
+      resolve: { extensions: ['.ts', '.min.js', '.js'] }
     },
 
     webpackMiddleware: {

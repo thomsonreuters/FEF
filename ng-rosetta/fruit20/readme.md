@@ -35,7 +35,6 @@ To generate an unoptimized version of the app with source maps, execute `npm run
 To generate an optimized version of the app without source maps, execute `npm run build:prod`. Currently, optimization is achieved via the Angular Ahead of Time (see below), and native webpack minification.
 
 ### Unit Tests
-#### NOTE: Unit tests are currently broken due to the reorganization of the webpack configuration.
 To start the Karma Unit Tests and File Watcher, execute `npm run test`
 
 ## Angular 2 Ahead of Time (AoT) Compilation
@@ -44,9 +43,9 @@ The [Angular 2 AOT](https://angular.io/docs/ts/latest/cookbook/aot-compiler.html
 This process has been simplified by the use of the @ngtools/webpack plugin. The use of this plugin, along with native webpack minification has been enabled as the default for the production build.
 
 ## TODO
-* Fix the karma/webpack configuration to restore unit tests.
 * Create a unit test for fruit-list component to handle the http call.
 * Modify promise-based operations to use observables
+* ~~Fix the karma/webpack configuration to restore unit tests.~~
 * ~~Implement Lazy Loading fruit-vendor in AOT~~
 * ~~Upgrade Webpack to 2.0~~
 

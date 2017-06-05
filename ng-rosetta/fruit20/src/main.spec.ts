@@ -1,6 +1,3 @@
-// This source code is provided under the BSD license and is provided AS IS with no warranty or guarantee of fit for purpose.  See the project's LICENSE.MD for details.
-// Copyright Thomson Reuters 2017. All rights reserved.
-
 import 'core-js'; // ES6 + reflect-metadata
 
 // zone.js
@@ -24,4 +21,5 @@ TestBed.initTestEnvironment(
 
 // load all specs in ./src
 const context = (require as any).context('../', true, /\.spec\.ts$/);
-context.keys().map(context)
+
+context.keys().map(context);
