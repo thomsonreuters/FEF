@@ -3,24 +3,36 @@
     "target": "es5",
     "module": "commonjs",
     "moduleResolution": "node",
-    "sourceMap": true,
+    "lib": [
+      "es2016",
+      "dom"
+    ], // This is required for the core-js library.    
+    "sourceMap": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true
-    // ,"typeRoots": [
-    //   "node_modules/@types"
-    // ],
-    // "types": [
-    //   "core-js",
-    //   "node"
-    // ]
+    "suppressImplicitAnyIndexErrors": true,
+    // Specify any ancillary types not included with various import statements.
+    "types": [
+      // add node as an option
+      "node",
+      "core-js",
+      "jasmine"
+    ],
+    // As of TypeScript 2.0, Type Defintion Files can now be consumed from the node_modules folder.
+    // @types is the public namespace for all tds files.
+    "typeRoots": [
+      // add path to @types
+      "node_modules/@types"
+    ]
   },
-  "files": [
-    "src/polyfills.ts",
-    "src/vendor.ts",
-    "src/main.ts",
-    "typings/index.d.ts"
-  ]
+  // "files": [] // The files section can be omitted as WebPack is now feeding the TS compiler.
+  "exclude": [
+    "node_modules",
+    "src/main.aot.ts"
+  ],
+  "angularCompilerOptions": {
+    "genDir": "./src/aot"
+  }
 }

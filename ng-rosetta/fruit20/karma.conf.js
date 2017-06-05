@@ -1,4 +1,4 @@
-var webpackConfig = require('./webpack.dev.js');
+var webpackConfig = require('./webpack.config.js');
 webpackConfig.entry = {};
 
 // Karma configuration
@@ -18,12 +18,12 @@ module.exports = function(config) {
 
     files: [
       // each file acts as entry point for the webpack configuration
-      {pattern: '../src/main.spec.ts', watched: true}
+      {pattern: 'src/main.spec.ts', watched: true}
     ],
 
     preprocessors: {
       // add webpack as preprocessor
-      '../src/main.spec.ts': ['webpack'],
+      'src/main.spec.ts': ['webpack'],
     },
 
     mime: {

@@ -6,6 +6,7 @@ import { NgModule }             from '@angular/core';
 import { BrowserModule }        from '@angular/platform-browser';
 import { FormsModule }          from '@angular/forms';
 import { HttpModule }           from '@angular/http';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api/in-memory-web-api.module';
 
 // Specify which features of the NG-Bootstrap libarary we will require.
 import { NgbModule }                  from '@ng-bootstrap/ng-bootstrap';
@@ -20,6 +21,7 @@ import { FruitDetailComponent }       from './fruit-detail/fruit-detail.componen
 import { FruitItemImageComponent }    from './fruit-detail/fruit-image.component';
 import { FruitService }               from './shared/fruit.service';
 import { FruitImageCellComponent }    from './fruit-list/fruit-image-cell.component';
+import { InMemoryDataService }      from '../data/in-memory-data.service';
 
 // The AppModule serves to combine our various comsponents, services and models into a discreet module.
 // All required references are imported above, and then referenced as follows:
@@ -33,6 +35,10 @@ import { FruitImageCellComponent }    from './fruit-list/fruit-image-cell.compon
     FormsModule,
     NgbModule.forRoot(),
     HttpModule,
+    // Note that we are using an In Memory Database Service to serve our data to our service.
+    // We configure the starting point for the service here.
+    // Note that this service must be imported *after* the HttpModule to allow it to attach it's interceptors to the Http service.
+    InMemoryWebApiModule.forRoot(InMemoryDataService, {passThruUnknownUrl: true}),    
     appRouting
   ],
   declarations: [

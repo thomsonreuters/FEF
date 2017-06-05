@@ -1,6 +1,7 @@
 # frontend/build generated directories
 
 aot/
+dist/
 
 node_modules/
 
