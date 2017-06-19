@@ -22,6 +22,11 @@
   },
   "exclude": [
     "node_modules",
-    "src/main.aot.ts"
-  ]
+    "src/main.ts",
+    // This AOT version excludes the AngularJS source code.
+    "src/legacy"
+  ],
+  "angularCompilerOptions": {
+    "genDir": "./src/aot"
+  }
 }

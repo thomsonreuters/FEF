@@ -1,0 +1,16 @@
+<!--This source code is provided under the BSD license and is provided AS IS with no warranty or guarantee of fit for purpose.  See the project's LICENSE.MD for details.
+Copyright Thomson Reuters 2017. All rights reserved.-->
+
+<h1>Fruit List View</h1>
+
+<span ng-show="ctlr.isLoaderBusy">Loading Fruit...</span>
+
+<div ng-hide="ctlr.isLoaderBusy">
+
+	<!-- 
+	Bind the grid to the gridModel property on the controller.
+    This property is loaded in the controller's constructor.
+	-->
+    <div ui-grid="ctlr.gridModel" ui-grid-selection style="width: 800px;height: 350px;"></div>
+
+</div>
