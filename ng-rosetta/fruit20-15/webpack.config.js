@@ -120,20 +120,19 @@ module.exports = (env = {}) => {
         entryModule: path.resolve(__dirname, './src/app/app.module#AppModule')
       }),
 
-      // TODO: Enable minification. The current minification configuration breaks the AOT version of the fruit-detail component.
       // The production build will minify and mangle the source code.
-      // new webpack.optimize.UglifyJsPlugin({
-      // beautify: false,
-      // compress: {
-      //   warnings: false,
-      //   screw_ie8: true
-      // },
-      // comments: false,
-      // mangle: {
-      //   screw_ie8: true,
-      //   keep_fnames: true
-      // }
-      // }),
+      new webpack.optimize.UglifyJsPlugin({
+      beautify: false,
+      compress: {
+        warnings: false,
+        screw_ie8: true
+      },
+      comments: false,
+      mangle: {
+        screw_ie8: true,
+        keep_fnames: true
+      }
+      }),
 
       new CompressionPlugin({
         asset: "[path].gz[query]",

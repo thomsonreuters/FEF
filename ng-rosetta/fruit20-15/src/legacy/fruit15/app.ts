@@ -63,25 +63,23 @@ export class AppConfig {
                 template: '<fruitdetailcomponent currentfruititem="$resolve.fruitParam"></fruitdetailcomponent>',
                 resolve: {
 
-                    // Sample Resolve Log Method.
-                    // fruitLog: ($stateParams) => { console.log($stateParams); },
+                    fruitParam: [
+                        '$stateParams', 'fruitService', 'fruitUtils', (
+                            $stateParams: IFruitDetailRouteParams,
+                            fruitService: FruitService,
+                            fruitUtils: FruitUtils) => {
 
-                    fruitParam: (
-                        $stateParams: IFruitDetailRouteParams,
-
-                        fruitService: FruitService,
-                        fruitUtils: FruitUtils) => {
-
-                        // Execute the factory method and cast the result of the async operation to the desired container and return it.
-                        return fruitService.GetFruitList().then(
-                            (data) => {
-                                // Pass the returned array into the service.method along with the desired ID to filter out the desired item.
-                                // Note that we case the $stateParams dependency to a custom interface to limit the available parameters,
-                                // as opposed to $stateParams['paramName'], which works but is not typed.
-                                return fruitUtils.ExtractFruitItem(data.data, Number($stateParams.FruitItemID));
-                            }
-                        );
-                    }
+                                // Execute the factory method and cast the result of the async operation to the desired container and return it.
+                                return fruitService.GetFruitList().then(
+                                    (data) => {
+                                        // Pass the returned array into the service.method along with the desired ID to filter out the desired item.
+                                        // Note that we case the $stateParams dependency to a custom interface to limit the available parameters,
+                                        // as opposed to $stateParams['paramName'], which works but is not typed.
+                                        return fruitUtils.ExtractFruitItem(data.data, Number($stateParams.FruitItemID));
+                                    }
+                                );
+                        }
+                    ]
                 }
             });
     }
