@@ -1,15 +1,26 @@
 {
-    "compilerOptions": {        
-        "outFile": "app/js/generated/fruitapp.js",
-        "module": "system",
-        "target": "es5",
-        "noImplicitAny": false,
-        "sourceMap": true
-    },    
-    "exclude": [
-        "node_modules"
-    ],
-    "files": [        
-        "app/js/app.ts"                        
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "lib": [
+      "es2016",
+      "dom"
+    ], // This is required for the core-js library.    
+    "sourceMap": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    // As of TypeScript 2.0, Type Defintion Files can now be consumed from the node_modules folder.
+    // @types is the public namespace for all tds files.
+    "typeRoots": [
+      // add path to @types
+      "node_modules/@types"
     ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }

@@ -1,17 +1,9 @@
 # frontend/build generated directories
-app/bower_components/
+src/app/bower_components/
 node_modules/
-app/lib/
-webapp/
 .tmp/
 dist/
-cmdb/
-generated/
-archive/
-typings/
 .git/
-
-yarn*.*
 
 #Visual Studio files
 # source: http://stackoverflow.com/questions/2143956/gitignore-for-visual-studio-projects-and-solutions
