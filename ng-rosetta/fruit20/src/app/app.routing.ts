@@ -25,7 +25,7 @@ const appRoutes: Routes = [
     // NOTE: The fruit-vendor route is temporarily disabled as it is causing the AOT enging to blow during the prod build.
     // This appears to only happen on windows, and only with this particular version.
     // Uncomment the route below to enable this feature in dev.
-    // { path: 'fruit-vendor', loadChildren: './fruit-vendor/fruit-vendor.module#FruitVendorModule' },
+    { path: 'fruit-vendor', loadChildren: './fruit-vendor/fruit-vendor.module#FruitVendorModule' },
 
     { path: '**', component: HomeComponent }
 ];

@@ -3,6 +3,7 @@ var webpack = require('webpack');
 var path = require('path');
 var ngToolsWebpack = require('@ngtools/webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 // As this is the common configuration portion, it will be consumed and merged with the actual dev & prod config files.
 // Each of those files will pass the environment configuration object (env) into this file.
@@ -35,6 +36,10 @@ module.exports = (env = {}) => {
       // Specifies which html file to insert the final bundled file references.
       new HtmlWebpackPlugin({
         template: 'src/index.html'
+      }),
+
+      new ExtractTextPlugin({
+        filename: "[name].css"
       })
 
     ],
@@ -72,10 +77,10 @@ module.exports = (env = {}) => {
 
         {
           test: /\.css$/,
-          use: [
-            { loader: 'style-loader' },
-            { loader: 'css-loader' }
-          ]
+          use: ExtractTextPlugin.extract({
+            fallback: "style-loader",
+            use: "css-loader"
+          })
         }
       ]
     }
@@ -123,7 +128,7 @@ module.exports = (env = {}) => {
         use: [
           { loader: '@ngtools/webpack' },
           { loader: 'angular2-template-loader' },
-          { loader: 'angular2-router-loader' }
+          { loader: 'angular2-router-loader?aot=true&genDir=./src/aot' }
         ]
       }
     );
