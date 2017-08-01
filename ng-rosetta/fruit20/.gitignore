@@ -16,5 +16,3 @@ generated/
 archive/
 
 .git/
-
-yarn*.*

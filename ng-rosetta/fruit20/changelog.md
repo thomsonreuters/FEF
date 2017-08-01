@@ -1,3 +1,9 @@
+# 2017-07-31.1
+
+## Features
+* Re-enabled the fruit-vendor lazy loading route. Added the new parameters to the angular2-router-loader necessary to enable AOT discovery & processing.
+* Added logic to webpack.config to extract css into separate files.
+
 # 2017-07-31
 
 ## Features
