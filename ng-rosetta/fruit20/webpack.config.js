@@ -51,15 +51,16 @@ module.exports = (env = {}) => {
       // The TypeScript compiler options are still configured via ./tsconfig.json.
       // Note also the that ts rule is conditionally applied below.
       rules: [
-        // {
-        //   enforce: 'pre',
-        //   test: /\.ts$/,
-        //   loader: 'tslint-loader',
-        //   exclude: /(node_modules)/,
-        //   options: {
-        //     configFile: 'tslint.json'
-        //   }
-        // },        
+        {
+          enforce: 'pre',
+          test: /\.ts$/,
+          loader: 'tslint-loader',
+          exclude: /(node_modules)/,
+          options: {
+            configFile: 'tslint.json'
+          }
+        },
+
         {
           test: /\.html$/,
           use: [{ loader: 'html-loader' }]

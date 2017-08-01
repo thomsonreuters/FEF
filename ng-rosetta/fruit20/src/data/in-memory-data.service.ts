@@ -14,11 +14,11 @@ export class InMemoryDataService implements InMemoryDbService {
             },
             {
                 id: 2,
-                common_name: "Red Bayberry",
-                species: "Myrica rubra",
+                common_name: "Starfruit",
+                species: "Averrhoa carambola",
                 region: "Eastern Asia",
-                url: "https://en.wikipedia.org/wiki/Myrica_rubra",
-                image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Yangmei.jpg/220px-Yangmei.jpg"
+                url: "https://en.wikipedia.org/wiki/Carambola",
+                image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Carambolas765pt.jpg/220px-Carambolas765pt.jpg"
             },
             {
                 id: 3,

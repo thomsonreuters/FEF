@@ -67,6 +67,7 @@ export class FruitListComponent implements OnInit {
     // Navigate to the fruit-vendor route.
     public loadVendor(): void {
         // Note that this route is lazy loaded via the angular-router.
-        this.router.navigate(['fruit-vendor']);
+        // this.router.navigate(['fruit-vendor']);
+        console.log('Lazy Loading of the Fruit Vendor module is currently disabled. See the app.routing.ts file for details.');
     }
 }

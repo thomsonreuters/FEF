@@ -1,3 +1,11 @@
+# 2017-07-31
+
+## Features
+* Upgraded to Angular 4.3.2
+* Temporarily disabled the fruit-vendor lazy loading route. Windows machines seem to now have an issue finding the lazy loaded file during the AOT process. Though the angular2-router-loader is unchanged and this works in the internal version of the project on the same machine. This may be related to newer versions of npm. Investigating.
+* Updated ./src/data/in-memory-data.service.ts to use a new fruit entry as the entry in position 2 appears to have been deleted from Wikipedia.
+* Re-enabled tslinting.
+
 # 2017-06-05
 
 ## Features
