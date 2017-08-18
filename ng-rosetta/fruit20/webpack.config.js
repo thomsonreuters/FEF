@@ -128,7 +128,7 @@ module.exports = (env = {}) => {
         use: [
           { loader: '@ngtools/webpack' },
           { loader: 'angular2-template-loader' },
-          { loader: 'angular2-router-loader?aot=true&genDir=./src/aot' }
+          { loader: 'angular-router-loader?aot=true&genDir=./src/aot' }
         ]
       }
     );
@@ -151,7 +151,7 @@ module.exports = (env = {}) => {
         use: [
           { loader: 'ts-loader' },
           { loader: 'angular2-template-loader' },
-          { loader: 'angular2-router-loader' }
+          { loader: 'angular-router-loader' }
         ]
       }
     );

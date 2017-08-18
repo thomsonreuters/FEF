@@ -1,3 +1,11 @@
+# 2017-08-18
+
+## Features
+* Updated Angular dependencies
+* Removed PhantomJS in favor of new headless Chrome introduced in Chrome 60.
+* Added Karma Unit Test Coverage
+
+
 # 2017-07-31.1
 
 ## Features

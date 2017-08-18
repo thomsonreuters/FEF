@@ -9,15 +9,17 @@ module.exports = function (config) {
 
     plugins: [
       require('karma-jasmine'),
+      require('karma-mocha-reporter'),
+      require('karma-remap-coverage'),
       require('karma-chrome-launcher'),
-      // require('karma-phantomjs-launcher'),
+      require('karma-coverage'),
+      require('karma-sourcemap-loader'),
       require('karma-webpack')
     ],
 
     client:{
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
-
 
     files: [
       // each file acts as entry point for the webpack configuration
@@ -26,7 +28,7 @@ module.exports = function (config) {
 
     preprocessors: {
       // add webpack as preprocessor
-      './src/main.spec.ts': ['webpack'],
+      './src/main.spec.ts': ['webpack', 'coverage'],
     },
 
     mime: {
@@ -40,15 +42,30 @@ module.exports = function (config) {
             test: /\.ts$/,
             exclude: [path.resolve(__dirname, './src/main.aot.ts')],
             use: [
-              { loader: 'ts-loader' },
+              {
+                loader: 'ts-loader',
+                query: {
+                  sourceMap: false,
+                  inlineSourceMap: true
+                }
+              },
               { loader: 'angular2-template-loader' },
-              { loader: 'angular2-router-loader' }
+              { loader: 'angular-router-loader' }
             ]
           },
+
           {
             test: /\.html$/,
             use: [{ loader: 'html-loader' }]
-          }
+          },
+          
+          {
+            enforce: 'post',
+            test: /\.ts$/,
+            loader: 'istanbul-instrumenter-loader',
+            include: [path.resolve(__dirname, 'src')],
+            exclude: /(node_modules|app\\spec)/,
+          }          
         ]
       },
       resolve: { extensions: ['.ts', '.min.js', '.js'] }
@@ -60,12 +77,23 @@ module.exports = function (config) {
       stats: 'errors-only'
     },
 
+    coverageReporter: {
+      type: 'in-memory'
+    },
+
+    remapCoverageReporter: {
+      'text-summary': null,
+      json: './coverage/coverage.json',
+      html: './coverage/html'
+    },
+
+    reporters: ['mocha', 'coverage', 'remap-coverage'],
+
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
-    // browsers: ['PhantomJS'],
-    singleRun: false
+    browsers: ['ChromeHeadless'],
+    singleRun: true
   });
 };
