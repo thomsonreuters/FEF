@@ -63,7 +63,7 @@
     "tslint-loader": "^3.5.3",
     "typescript": "2.3.0",
     "webpack": "2.5.1",
-    "webpack-bundle-analyzer": "^2.8.2",
+    "webpack-bundle-analyzer": "^3.3.2",
     "webpack-dev-server": "2.4.5"
   },
   "main": "index.js"
